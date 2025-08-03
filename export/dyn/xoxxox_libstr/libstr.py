@@ -33,6 +33,6 @@ class OpeStr:
     datcat = strcat.encode("utf-8")
     return datcat
 
-LibMid.dicprc.append({"key": "xoxxox.OpeStr.strcar", "frm": "LibMid.plugin['xoxxox_libstr'].OpeStr.strcar(values[dicreq['keydat']])", "syn": True})
-LibMid.dicprc.append({"key": "xoxxox.OpeStr.strcdr", "frm": "LibMid.plugin['xoxxox_libstr'].OpeStr.strcdr(values[dicreq['keydat']])", "syn": True})
-LibMid.dicprc.append({"key": "xoxxox.OpeStr.strcat", "frm": "LibMid.plugin['xoxxox_libstr'].OpeStr.strcat(values[dicreq['keydat']], values[dicreq['keycdr']])", "syn": True})
+LibMid.dicprc["xoxxox.OpeStr.strcar"] = {"frm": "xoxxox_libstr.OpeStr.strcar", "arg": ["keydat"], "syn": True}
+LibMid.dicprc["xoxxox.OpeStr.strcdr"] = {"frm": "xoxxox_libstr.OpeStr.strcdr", "arg": ["keydat"], "syn": True}
+LibMid.dicprc["xoxxox.OpeStr.strcat"] = {"frm": "xoxxox_libstr.OpeStr.strcat", "arg": ["keydat", "keycdr"], "syn": True}

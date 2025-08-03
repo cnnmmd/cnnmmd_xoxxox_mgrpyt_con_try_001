@@ -1,5 +1,6 @@
 #---------------------------------------------------------------------------
 
+import time
 import asyncio
 from xoxxox.shared import PrcFlw
 from xoxxox.midclt import MidClt
@@ -12,6 +13,7 @@ adrmid = dicsrv["xoxxox_appmid_loc"]
 #---------------------------------------------------------------------------
 # 文字列を切断し、連結する（xyz -> x, yz -> xyz）
 
+time.sleep(2)
 async def catstr(strarg):
   datres = await MidClt.reqprc({}, adrmid + MidClt.adrini)
   datres = await MidClt.reqset(strarg, adrmid + MidClt.adrset)
